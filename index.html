@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/all.css" />
     <script src="/js/all.js"></script>
+
+    <script src="/js/main.js"></script>
     <title>Presentation</title>
 </head>
 
@@ -18,7 +20,7 @@
         <h1>Welcome To My Presentation Website</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, odio voluptas, nostrum ipsa maxime ipsum accusamus voluptatibus architecto praesentium ut nisi odit. Non ducimus id ipsum. Beatae hic fuga quisquam consequatur minus, ad, vitae officiis,
-            dolor velit minima voluptate rerum.
+            dolor velit minima voluptate rerum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, dicta.
         </p>
 
         <div>
@@ -91,6 +93,29 @@
 
         </div>
     </section>
+
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $('.btn').on('click', function(event) {
+
+            if (this.hash !== '') {
+                event.preventDefault();
+                const hash = this.hash;
+
+                $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 100
+
+                    }),
+
+                    800
+            };
+
+
+
+
+        });
+    </script>
 </body>
 
 </html>
